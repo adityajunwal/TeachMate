@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeachMate</title>
+    <link rel="stylesheet" href="DashBoard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div id="left-sidebar">
+
+        <div id="side-bar">
+            <div id="branding-container">
+                <div id="branding">
+                    <img id="branding-logo" src="../src/Teachmate-logo.png" alt="Logo">
+                    <h3 id="branding-name">TeachMate</h1>
+                </div>
+                <button id="theme-selector" value="dark" title="Change theme" onclick="changeTheme()">&#9728;</button>
+            </div>
+            <div id="side-bar-list">
+                <span class="side-bar-list_item" id="dashboard">DashBoard</span>
+                <span class="side-bar-list_item" id="chat">AI Chat</span>
+                <span class="side-bar-list_item" id="attendance">Attedance</span>
+                <span class="side-bar-list_item" id="tasks">Tasks</span>
+            </div>
+        </div>
+
+        <div id="teacher-details">
+            <img id="teacher-profile-pic" src="../src/profile-icon-9.png" alt="Teacher Profile Image">
+            <p id="teacher-name">Rakesh Jain</p>
+            <p id="teacher-id">CSEfac101</p>
+        </div>
+    </div>
+    <div id="mid-container">
+        <div class="teacher-greeting">
+            <p id="greeting">Hello, Rakesh!</p>
+        </div>
+
+        <div id="widgets">
+            <div class="widget" id="attendance-graph">
+                <canvas height="100%" id="attendanceChart"></canvas>
+            </div>
+            <div class="widget" id="tasks-widget">
+                <p class="title" id="tasks-title">Your Tasks</p>
+                <div id="task-list">
+                    <span class="task">Task 1</span>
+                    <span class="task">Task 2</span>
+                    <span class="task">Task 3</span>
+                    <span class="task">Task 4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="right-sidebar">
+        <div class="calendar">
+            <h2 id="month-year"></h2>
+            <table class="calendar">
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody id="calendar-body">
+                    <!-- Calendar will be generated here -->
+                </tbody>
+            </table>
+        </div>
+        <div class="widget" id="notification-widget">
+            <p class="title" id="notification-title">Your Notifications</p>
+            <div id="notification-list">
+                <span class="notifications">Notification 1</span>
+                <span class="notifications">Notification 2</span>
+                <span class="notifications">Notification 3</span>
+                <span class="notifications">Notification 4</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="DashBoards.js"></script>
+</body>
+
+</html>
